@@ -8,6 +8,11 @@
     "dev": "nodemon src/index.js",
     "build": "echo 'No build step for plain Node'"
   },
+  "scripts": {
+  "start": "node src/index.js",
+  "dev": "nodemon src/index.js",
+  "build": "npm install --legacy-peer-deps"
+}
   "dependencies": {
     "express": "^4.19.2",
     "mongoose": "^8.3.2",
