@@ -73,7 +73,9 @@ app.use('/api/gift-orders', giftOrderRoutes)
 app.use('/api/quiz', quizRoutes)  // ← NEW
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }))
-
+app.get('/', (req, res) => {
+  res.send('🚀 WishStory API is running');
+});
 app.use((_req, res)       => res.status(404).json({ error: 'Route not found' }))
 app.use((err, _req, res, _next) => {
   console.error(err.stack)
